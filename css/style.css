@@ -1,0 +1,139 @@
+@font-face {
+  font-family: "Rudiment";
+  src: url("../fonts/Rudiment.ttf");
+}
+/*@font-face {
+  font-family: "Toony";
+  src: url("../fonts/Toony.ttf");
+}*/
+
+@font-face {
+  font-family: "Hairball";
+  src: url("../fonts/TakeOffHairball.otf");
+}
+
+@font-face {
+  font-family: "Coretan";
+  src: url("../fonts/Coretan.ttf");
+}
+
+@font-face {
+  font-family: "JennaSue";
+  src: url("../fonts/JennaSue.ttf");
+}
+
+@font-face {
+  font-family: "Luna";
+  src: url("../fonts/Luna.ttf");
+}
+
+/*h1, h2, h3, h4, h5, a, span, label, legend {
+    font-family: sans-serif;
+}*/
+body {
+  margin-left: 6em;
+  border-left: 2px solid #de2049;
+  padding-left: 2em;
+  background-image: -webkit-linear-gradient(#fcfcf9 0%, rgba(255,255,248,0.96) 100%);
+  background-attachment: fixed;
+  color: dimgray;
+}
+header {
+  vertical-align: bottom;
+  min-height: 8em;
+
+}
+nav {
+  position: relative;
+  bottom: 0;
+  min-height: 7em;
+}
+
+header::before, header::after {
+}
+
+header::before {
+}
+
+header::after {
+}
+
+nav ul {
+  display: inline-block;
+  margin-bottom: 0;
+  bottom: 0;
+  position: absolute;
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  text-decoration: none;
+  margin-right: 1em;
+  display: inline-block;
+  position: relative;
+  bottom: -0.2em;
+  padding: 2px 20px 0px 8px;
+  border: 2px solid transparent;
+  font-size: 10em;
+  font-family: "JennaSue";
+  font-weight: normal;
+}
+
+nav a:visited {
+}
+
+nav li:hover {
+}
+
+nav li:hover a {
+}
+
+nav li:not(.cur_page) {
+}
+.cur_page a {
+  text-decoration: underline;
+}
+
+#domain_div {
+  display: inline-block;
+  float: right;
+  margin-bottom: 10px;
+}
+
+
+#domain_banner {
+  font-family: "Hairball";  
+}
+#subdomain {
+  font-family: "Hairball";
+  display: block;
+}
+
+#header_line {
+  border-bottom: 2px solid #81b8fb;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  }
+  
+section {
+  font-family: "Luna";
+}
+  
+section:first-of-type h1:first-of-type {
+  font-size: 4em;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-family: "JennaSue";
+  font-weight: normal;
+}
+
+section:first-of-type h2:first-of-type {
+  font-size: 3em;
+  margin-bottom: 0;
+  margin-top: 0;
+  font-weight: lighter;
+}
