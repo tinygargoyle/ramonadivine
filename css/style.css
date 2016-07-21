@@ -30,13 +30,22 @@
 /*h1, h2, h3, h4, h5, a, span, label, legend {
     font-family: sans-serif;
 }*/
+html {
+  min-width: 300px;
+}
 body {
+  position: absolute;
+  min-height: 100%;
   margin-left: 6em;
   border-left: 2px solid #de2049;
   padding-left: 2em;
   background-image: -webkit-linear-gradient(#fcfcf9 0%, rgba(255,255,248,0.96) 100%);
+  background-image: linear-gradient(#fcfcf9 0%, rgba(255,255,248,0.96) 100%);
   background-attachment: fixed;
   color: dimgray;
+  padding-bottom: 3em;
+  width: calc(100% - 8em - 2px);
+  
 }
 header {
   vertical-align: bottom;
@@ -101,6 +110,7 @@ nav li:not(.cur_page) {
   display: inline-block;
   float: right;
   margin-bottom: 10px;
+  margin-right: 2px;
 }
 
 
@@ -136,4 +146,70 @@ section:first-of-type h2:first-of-type {
   margin-bottom: 0;
   margin-top: 0;
   font-weight: lighter;
+}
+
+footer {
+  min-height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+footer>div {
+  border-top: 5px ridge #81b8fb;
+  background-color: #131313;
+  position: absolute;
+  left: 0;
+  width: calc(100% - 20px);
+  min-width: calc(100% - 1.5em - 2px);
+  padding: 10px;
+  text-align: center;
+  box-shadow: inset 3px 4px 10px black;
+  padding-bottom: 15px;
+  bottom: 0;
+}
+
+footer span {
+  display: block;
+}
+
+#gallery_current_img {
+  box-shadow: 0px 0px 4px 4px black;
+}
+
+@media screen and (max-width: 990px) {
+  body {
+    margin-left: 1em;
+    padding-left: 0.5em;
+    position: absolute;
+    margin-top: 0;
+    margin-right: 0;
+    width: calc(100% - 1.5em - 2px);
+    
+    }
+    
+    header {
+      min-height: 2em;
+      padding-bottom: 1em;
+    }
+    
+    nav {
+      min-height: 3em;
+    }
+    
+  nav a {
+    font-size: 2em;
+    padding-right: 5px;
+    margin-right: 0;
+    min-height: 1em;
+    }
+  nav ul {
+    padding-left: 0px;
+  }
+  section:first-of-type h2:first-of-type {
+    font-size: 1.2em;
+  }
+  section img {
+    max-width: calc(100% - 0.5em);
+  }
+
 }

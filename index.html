@@ -27,13 +27,27 @@
 <section>
     <h1>Hi There!</h1>
     <h2>Here you will find my comic collection!</h2>
-    <img src="http://placekitten.com/600/400">
+    <form id="comics" name="comics" target="_self" method="get">
+      <input type="text" hidden="true" id="co_comicIndex" name="comicIndex">
+      <div id="pic_nav_div">
+        <button id="pic_nav_prev">&lt;</button>
+        <span id="pic_index">0</span>
+        <button id="pic_nav_next">&gt;</button>
+      </div>
+    </form>
+    <a id="gallery_anchor">
+      <img id="gallery_current_img" src="http://placekitten.com/600/400">
+    </a>
 </section>
 <!-- Begin Global footer -->
 <footer>
+  <div>
+    <span>Copyright (c) 2016 TinyGargoyle</span>
+  </div>
 </footer>
 <script type="text/javascript" src="js/page.js"></script>
 <script type="text/javascript" src="js/jsToolbox.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
 <!-- End Global footer -->
 </body>
 </html>
