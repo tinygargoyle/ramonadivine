@@ -167,14 +167,51 @@ footer span {
   display: block;
 }
 
+form#comics {
+  border: 2px solid #b7d3fa;
+  display: block;
+  /*width: calc(100% - 20px);*/
+  text-align: center;
+  background-color: #b7d3fa;
+  height: calc(2em + 6px);
+  
+}
+
+#gallery_anchor {
+  border: 5px solid #b7d3fa;
+  border-radius: 20px;
+  overflow: hidden;
+  display: inline-block;
+  border-top-left-radius: 0px;
+  text-align: center;
+  background-color: #b7d3fa;
+}
+
 #gallery_current_img {
-  box-shadow: 0px 0px 4px 4px black;
+  background-color: #fcfcf9;
 }
 
 #gallery_iframe {
   border-width: 0;
   display: block;
+  background-color: #b7d3fa;
 }
+
+#pic_nav_div {
+  display: inline-block;
+  color: #fcfcf9;
+  height: 2em;
+  background-color: #3881d9;
+  border-radius: 30px;
+  overflow: hidden;
+  border: 3px solid #3881d9;
+}
+
+#pic_nav_div button {
+  height: 100%;
+  display: inline-block;
+}
+
 
 @media screen and (max-width: 990px) {
   body {
