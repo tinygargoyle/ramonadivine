@@ -148,13 +148,8 @@ section:first-of-type h2:first-of-type {
   font-weight: lighter;
 }
 
-footer {
-  min-height: 100%;
-  box-sizing: border-box;
-  overflow: hidden;
-}
 
-footer>div {
+footer {
   border-top: 5px ridge #81b8fb;
   background-color: #131313;
   position: absolute;
@@ -174,6 +169,11 @@ footer span {
 
 #gallery_current_img {
   box-shadow: 0px 0px 4px 4px black;
+}
+
+#gallery_iframe {
+  border-width: 0;
+  display: block;
 }
 
 @media screen and (max-width: 990px) {
@@ -213,3 +213,5 @@ footer span {
   }
 
 }
+
+
