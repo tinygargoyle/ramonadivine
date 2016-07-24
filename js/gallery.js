@@ -6,6 +6,9 @@ var galAnchor = byID("gallery_anchor");
 var btnPrev = byID ("pic_nav_prev");
 var btnNext = byID ("pic_nav_next");
 var spanIndex = byID ("pic_index");
+var btnPrev2 = byID ("pic_nav_prev2");
+var btnNext2 = byID ("pic_nav_next2");
+var spanIndex2 = byID ("pic_index2");
 var imgCur = byID ("gallery_current_img");
 var iframeCur = byID ("gallery_iframe");
 var maxIndex = 3;
@@ -19,6 +22,7 @@ function getCurIndex() {
 
 function setCurIndex(newIndex) {
   spanIndex.textContent = newIndex;
+  spanIndex2.textContent = newIndex;
   inputIndex.value = newIndex;
   return;
 }
@@ -114,5 +118,12 @@ window.onhashchange = function (evt) {
 
 btnNext.onclick = onClickNext;
 btnPrev.onclick = onClickPrev;
+btnNext2.onclick = onClickNext;
+btnPrev2.onclick = onClickPrev;
+
+btnNext.addEventListener("touchstart", function (evt){}, false);
+btnNext2.addEventListener("touchstart", function (evt){}, false);
+btnPrev.addEventListener("touchstart", function (evt){}, false);
+btnPrev2.addEventListener("touchstart", function (evt){}, false);
 
 
