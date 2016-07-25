@@ -14,6 +14,11 @@ Element.prototype.addClassName = function(classString) {
     return true;
 };
 
+Element.prototype.hasClassName = function(classString) {
+  var oldClassList = this.className.split(" ");
+  return oldClassList.indexOf(classString) !== -1;
+}
+
 Element.prototype.removeClassName = function(classString) {
     var oldClassList = this.className.split(" ");
     var newClassList = oldClassList.filter(function(i){return (i !== classString)});

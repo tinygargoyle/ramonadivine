@@ -11,7 +11,7 @@ var btnNext2 = byID ("pic_nav_next2");
 var spanIndex2 = byID ("pic_index2");
 var imgCur = byID ("gallery_current_img");
 var iframeCur = byID ("gallery_iframe");
-var maxIndex = 3;
+var maxIndex = 5;
 var minIndex = 0;
 var inputIndex = byID ("co_comicIndex");
 
@@ -72,6 +72,8 @@ function setIframeSrc(iframeSrcStr) {
 function updateGalImg() {
   var new_img_index = getCurIndex();
   var new_img_src = imgSrcFrmt(new_img_index);
+  imgCur.addClassName("loading");
+  show_loaded_image();
   setImgSrc(new_img_src);
   return;
 }
@@ -100,6 +102,16 @@ function parseHash(){
   }
   else {
     setCurIndex(temp_hash);
+  }
+}
+
+
+function show_loaded_image(){
+  if (imgCur.complete) {
+    imgCur.removeClassName("loading");
+  }
+  else {
+    window.setTimeout(show_loaded_image, 500);
   }
 }
 

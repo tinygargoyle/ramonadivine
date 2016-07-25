@@ -6,6 +6,9 @@
     <title>Home</title>
     <!-- Begin Global Head Content -->
     <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width">
+    <link rel="prefetch" href="fonts/JennaSue.ttf">
+    <link rel="prefetch" href="fonts/Luna.ttf">
+    <link rel="prefetch" href="fonts/TakeOffHairball.otf">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- End Global Head Content -->
 </head>
@@ -14,7 +17,7 @@
 <header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="./">Home</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
         <div id="domain_div">
@@ -37,7 +40,9 @@
           <button id="pic_nav_next">&gt;</button>
         </div>
       </form>
-      <img id="gallery_current_img" src="">
+      <div id="cur_image_wrapper">
+        <img id="gallery_current_img" src="">
+      </div>
       <iframe width="100%" height="70px" id="gallery_iframe"></iframe>
       <div id="pic_nav_div2">
           <button id="pic_nav_prev2" form="comics">&lt;</button>

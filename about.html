@@ -5,6 +5,9 @@
     <title>About</title>
     <!-- Begin Global Head Content -->
     <meta name="viewport" content="initial-scale=1.0, user-scalable=yes, width=device-width">
+    <link rel="prefetch" href="fonts/JennaSue.ttf">
+    <link rel="prefetch" href="fonts/Luna.ttf">
+    <link rel="prefetch" href="fonts/TakeOffHairball.otf">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- End Global Head Content -->
 </head>
@@ -13,7 +16,7 @@
 <header>
     <nav>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="./">Home</a></li>
             <li><a href="about.html">About</a></li>
         </ul>
         <div id="domain_div">
@@ -25,13 +28,20 @@
 </header>
 <!-- End Global header -->
 <section>
-    <h1>Home</h1>
+    <h1>About</h1>
+    <h2>Here you will find a little bit of information about me!</h2>
+    <div id="cur_image_wrapper">
+      <img id="gallery_current_img" src="images/img_4.png" class="loading">
+    </div>
 </section>
 <!-- Begin Global footer -->
 <footer>
+  <span>Copyright (c) 2016 TinyGargoyle</span>
 </footer>
 <script type="text/javascript" src="js/page.js"></script>
 <script type="text/javascript" src="js/jsToolbox.js"></script>
+<script type="text/javascript" src="js/gallery.js"></script>
 <!-- End Global footer -->
+<script type="text/javascript">show_loaded_image();</script>
 </body>
 </html>
