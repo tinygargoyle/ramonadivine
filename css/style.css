@@ -340,5 +340,7 @@ form#comics {
     font-size: 1.2em;
   }
 
-
+#cur_image_wrapper {
+  max-width: 800px;
+}
 

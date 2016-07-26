@@ -29,7 +29,13 @@ function setCurIndex(newIndex) {
 
 function deltaCurIndex(deltaValue) {
   var old_index = getCurIndex();
-  var new_index = (old_index + deltaValue + maxIndex) % maxIndex;
+  if (maxIndex == 0) {
+    var new_index = 0;
+  }
+  else {
+    var new_index = (old_index + deltaValue + maxIndex) % maxIndex;
+  }
+  
   setCurIndex(new_index);
   setHash(new_index);
   return new_index;
