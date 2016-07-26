@@ -11,7 +11,7 @@ var btnNext2 = byID ("pic_nav_next2");
 var spanIndex2 = byID ("pic_index2");
 var imgCur = byID ("gallery_current_img");
 var iframeCur = byID ("gallery_iframe");
-var maxIndex = -1;
+var maxIndex = 0;
 var minIndex = 0;
 var inputIndex = byID ("co_comicIndex");
 
@@ -137,5 +137,3 @@ btnNext.addEventListener("touchstart", function (evt){}, false);
 btnNext2.addEventListener("touchstart", function (evt){}, false);
 btnPrev.addEventListener("touchstart", function (evt){}, false);
 btnPrev2.addEventListener("touchstart", function (evt){}, false);
-
-
