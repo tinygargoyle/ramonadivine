@@ -217,6 +217,7 @@ form#comics {
   position: relative;
   background-color: transparent;
   border-color: #eaf2fe;
+  max-width: calc(100% - 10px);
 }
 
 #cur_image_wrapper {
@@ -244,6 +245,15 @@ form#comics {
   border-width: 0;
   display: block;
   background-color: #b7d3fa;
+  line-height: normal;
+}
+
+#md_caption {
+    position: relative;
+    max-height: 10em;
+    overflow: scroll;
+    text-align: left;
+    font-family: sans-serif;
 }
 
 #pic_nav_div::before, #pic_nav_div2::before {

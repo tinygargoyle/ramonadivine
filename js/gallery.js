@@ -44,8 +44,9 @@ function deltaCurIndex(deltaValue) {
 function onClickNext(evt) {
   var new_index = deltaCurIndex(1);
   updateGalImg();
-  updateGalCap();
+  //updateGalCap();
   evt.preventDefault();
+  reqTest();
   return;
 }
 
@@ -123,13 +124,13 @@ function show_loaded_image(){
 
 parseHash();
 updateGalImg();
-updateGalCap();
+//updateGalCap();
 
 window.onhashchange = function (evt) {
   console.log(getHash());
   parseHash();
   updateGalImg();
-  updateGalCap();
+  //updateGalCap();
 }
 
 
@@ -143,3 +144,37 @@ btnNext.addEventListener("touchstart", function (evt){}, false);
 btnNext2.addEventListener("touchstart", function (evt){}, false);
 btnPrev.addEventListener("touchstart", function (evt){}, false);
 btnPrev2.addEventListener("touchstart", function (evt){}, false);
+
+var mdConverter = new showdown.Converter();
+
+function reqListener() {
+  var res = this.responseText;
+  var new_html_frag = mdConverter.makeHtml(res);
+  var dp = new DOMParser();
+  var new_dom_frag = dp.parseFromString(new_html_frag, "text/html");
+  var old_cap = byID ("md_caption");
+  if (old_cap !== null) {
+    iframeCur.removeChild(old_cap);
+  }
+  var new_cap = document.createElement("div");
+  new_cap.id = "md_caption";
+  for (var i = 0; i < new_dom_frag.body.children.length; i++) {
+    new_cap.appendChild(new_dom_frag.body.children[i]);
+  }
+  /*
+  iframeCur.src = "";
+  iframeCur.srcdoc = newdoc;
+  var s1 = iframeCur.contentDocument.createElement("style");
+  s1.setAttribute("type", "text/css");
+  s1.textContent = "* {font-family: sans-serif;}";
+  iframeCur.contentDocument.head.appendChild(s1);*/
+  iframeCur.appendChild(new_cap);
+}
+
+function reqTest() {
+  var oReq = new XMLHttpRequest();
+  oReq.addEventListener("load", reqListener);
+  oReq.open("GET", "markdown/Master.md");
+  oReq.send();
+}
+
